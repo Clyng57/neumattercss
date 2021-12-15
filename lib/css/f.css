@@ -1,0 +1,253 @@
+
+
+/*
+============================================================================
+  FORMS
+----------------------------------------------------------------------------
+*/
+
+/* 
+  Base style
+----------------------------------------------
+*/
+
+.f-input {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  line-height: 1.4;
+  font: inherit;
+  padding: calc(var(--system-margin) / 4) calc(var(--system-margin) / 2);
+  background-color: var(--bg-base);
+  border-radius: var(--system-margin);
+  border: none;
+  box-shadow: 0px 0px 0px 0 var(--Shadow-none), 0px 0px 0px 0 var(--Highlight-none), inset 0.1875em 0.1875em 0.5em 0 var(--Shadow-concave), inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight);
+}
+.f-input:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 4px var(--focus), 0px 0px 0px 1px var(--info), inset 0.1875em 0.1875em 0.5em 0 var(--Shadow-concave), inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight);
+}
+
+input:disabled.f-input {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  line-height: 1.4;
+  font: inherit;
+  padding: calc(var(--system-margin) / 4) calc(var(--system-margin) / 2);
+  background-color: var(--disabled);
+  border-radius: var(--system-margin);
+  border: none;
+  box-shadow: 0px 0px 0px 0 var(--Shadow-none), 0px 0px 0px 0 var(--Highlight-none), inset 0.1875em 0.1875em 0.5em 0 var(--Shadow-none), inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight-none);
+}
+
+input.f-input.f-invalid {
+  box-shadow: 0px 0px 0px 0 var(--Shadow-none), 0px 0px 0px 1px var(--danger), inset 0.1875em 0.1875em 0.5em 0 var(--Shadow-concave), inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight);
+}
+
+input:focus.f-input.f-invalid {
+  box-shadow: 0px 0px 0px 4px var(--danger-20), 0px 0px 0px 1px var(--danger), inset 0.1875em 0.1875em 0.5em 0 var(--Shadow-concave), inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight);
+}
+
+label.f-float-label {
+  position: relative;
+  z-index: 2;
+  margin-left: calc(var(--system-margin) / 2);
+}
+
+/* 
+  Textarea
+----------------------------------------------
+*/
+
+textarea.f-input {
+  min-height: calc(var(--system-margin) * 3);
+}
+
+/* 
+  Select
+----------------------------------------------
+*/
+
+select::-ms-expand {
+  display: none;
+}
+
+select.f-input {
+  display: inline-block;
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  -moz-box-shadow: 0.3125em 0.3125em 0.75em 0 var(--Shadow), -0.4375em -0.4375em 0.75em 0 var(--Highlight), inset 0.1875em 0.1875em 0.5em 0 var(--Shadow-none), inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight-none);
+  -webkit-box-shadow: 0.3125em 0.3125em 0.75em 0 var(--Shadow), -0.4375em -0.4375em 0.75em 0 var(--Highlight), inset 0.1875em 0.1875em 0.5em 0 var(--Shadow-none), inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight-none);
+  box-shadow: 0.3125em 0.3125em 0.75em 0 var(--Shadow), -0.4375em -0.4375em 0.75em 0 var(--Highlight), inset 0.1875em 0.1875em 0.5em 0 var(--Shadow-none), inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight-none);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--bg-base) 50%),
+    linear-gradient(135deg, var(--bg-base) 50%, transparent 50%),
+    linear-gradient(45deg, var(--primary) 50%, var(--primary) 50%);
+  background-position:
+    calc(100% - 1.15rem) calc(0.9em + 0.025rem),
+    calc(100% - 0.8375rem) calc(0.9em + 0.025rem),
+    100% 100%;
+  background-size:
+    0.3125rem 0.3125rem,
+    0.3125rem 0.3125rem,
+    2rem 3rem;
+  background-repeat: no-repeat;
+  transition: 0.25s;
+}
+
+select.f-input:hover {
+  cursor: pointer;
+}
+
+/* 
+  Toggle Switch
+----------------------------------------------
+*/
+
+.f-toggle input[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.f-toggle {
+  display: block;
+  background-color: transparent;
+  position: relative;
+  box-shadow: none;
+}
+
+.f-toggle label {
+  display: inline-block;
+  width: calc(var(--system-height) * 2.5);
+  height: calc(var(--system-height) + 6px);
+  background-color: var(--info-20);
+  border-radius: calc(var(--system-height) / 2 + 3px);
+  position: relative;
+  box-shadow: 0px 0px 0px 0 var(--Shadow-none), 0px 0px 0px 0 var(--Highlight-none), inset 0.093525em 0.093525em 0.25em 0 var(--Shadow-concave), inset -0.093525em -0.093525em 0.150625em 0 var(--Highlight);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.25s;
+}
+
+.f-toggle input[type="checkbox"]:disabled~label,
+.f-toggle input[type="checkbox"].disabled~label {
+  background-color: var(--disabled);
+}
+
+.f-toggle label:after {
+  content: "";
+  width: var(--system-height);
+  height: var(--system-height);
+  background-color: var(--white);
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0.15em 0.15em 0.325em 0 var(--Shadow), -0.215em -0.215em 0.325em 0 var(--Highlight-concave);
+  top: 3px;
+  left: 3px;
+  transition: 0.25s;
+}
+
+.f-toggle input[type="checkbox"]:disabled~label:after {
+  content: "";
+  width: var(--system-height);
+  height: var(--system-height);
+  background-color: var(--bg-base);
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0.15em 0.15em 0.325em 0 var(--Shadow-none), -0.215em -0.215em 0.325em 0 var(--Highlight-none);
+  top: 3px;
+  left: 3px;
+  transition: 0.25s;
+}
+
+.f-toggle input[type="checkbox"]:checked~label:after {
+  right: 3px;
+  left: calc(100% - var(--system-height) - 3px);
+}
+
+.f-toggle input[type="checkbox"]:checked~label {
+  background-color: var(--success);
+}
+
+/* 
+  Checkbox
+----------------------------------------------
+*/
+.f-checkbox input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--system-height);
+  height: var(--system-height);
+  opacity: 0;
+  z-index: 2;
+}
+
+.f-checkbox {
+  position: relative;
+  display: block;
+  padding-left: calc(var(--system-margin) + var(--system-margin) / 4);
+}
+
+.f-checkbox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--system-height);
+  height: var(--system-height);
+  border-radius: calc(var(--system-height) / 4);
+  box-shadow: 0px 0px 0px 1px var(--primary-20), 0px 0px 0px 0 var(--Highlight-none), inset 0.093525em 0.093525em 0.25em 0 var(--Shadow-concave), inset -0.093525em -0.093525em 0.150625em 0 var(--Highlight);
+  background-color: transparent;
+}
+
+.f-checkbox input[type="checkbox"]:hover ~ span {
+  background-color: #ccc;
+}
+
+.f-checkbox input[type="checkbox"]:checked ~ span {
+  background-color: var(--primary);
+  box-shadow: 0px 0px 0px 0 var(--Shadow-none), 0px 0px 0px 0 var(--Highlight-none), inset 0.093525em 0.093525em 0.25em 0 var(--Shadow-concave), inset -0.093525em -0.093525em 0.150625em 0 var(--Highlight-concave);
+}
+
+.f-checkbox span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.f-checkbox input[type="checkbox"]:checked ~ span:after {
+  display: block;
+}
+
+.f-checkbox span:after {
+  left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type=file]::file-selector-button {
+  padding: .2em .4em;
+  border-radius: calc(var(--system-height) / 2);
+  font-size: inherit;
+  height: var(--system-height);
+  background-color: var(--primary);
+  border: none;
+}

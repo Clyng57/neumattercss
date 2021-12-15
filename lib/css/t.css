@@ -1,0 +1,113 @@
+
+
+/*
+============================================================================
+  TYPOGRAPHY
+----------------------------------------------------------------------------
+*/
+
+/* 
+  code
+----------------------------------------------
+*/
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-stack-monospace);
+  font-size: 0.875rem;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+code { color:#f2f2f2; }
+a>code { color: inherit; }
+
+.l-system-wrapper.code { background-color: var(--bg-one); } /* for bg color of code box */
+
+.t-tag       { color:#ffa4fc;  } /* for tags      */
+.t-attribute { color:#ffd9a1;  } /* for attribute */
+.t-property  { color: #aca9ff; } /* for props     */
+.t-class     { color:#ffac54;  } /* for classes   */
+.t-operator  { color:#32cef5;  } /* for operator   */
+
+/* 
+  t-type & <p>
+----------------------------------------------
+*/
+
+p { font-size: 0.9375rem; line-height: 1.4; }
+
+.t-type\/title {
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.t-type\/secondary {
+  font-size: 0.78rem;
+  color: var(--text-negativeone);
+  line-height: 1.25;
+}
+
+/* 
+  t-size & <h[1-6]>
+----------------------------------------------
+*/
+
+.t-size\/1,h1 { font-size: 1.8125rem; line-height: 1.25;  }
+.t-size\/2,h2 { font-size: 1.625rem; line-height: 1.275;  }
+.t-size\/3,h3 { font-size: 1.4375rem; line-height: 1.3;   }
+.t-size\/4,h4 { font-size: 1.325rem; line-height: 1.325;  }
+.t-size\/5,h5 { font-size: 1.25rem; line-height: 1.35;    }
+.t-size\/6,h6 { font-size: 1.0625rem; line-height: 1.375; }
+
+/* 
+  t-paragraph
+----------------------------------------------
+    - to add hyphens and to better wrapping
+*/
+
+.t-paragraph {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;   
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;  
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;   
+  -ms-hyphenate-limit-zone: 8%;
+  hyphens: auto;
+}
+
+.t-list-style\/none { padding-left: 0; list-style: none; }
+
+.t-blockquote { font-size: 1.15rem; }
+
+.t-monospace    {  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;  }
+
+.t-white-space\/wrap   {  white-space: normal;  }
+.t-white-space\/nowrap {  white-space: nowrap;  }
+
+.t-align\/justify {  text-align: justify;  }
+.t-align\/left    {  text-align: left;     }
+.t-align\/right   {  text-align: right;    }
+.t-align\/center  {  text-align: center;   }
+
+.t-decoration\/none {  text-decoration: none;  }
+
+.t-hyphens {  word-break: break-word; overflow-wrap: break-word;  }
+
+.t-line-height\/reset {  line-height: 1.0  }
