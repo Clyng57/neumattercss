@@ -1,4 +1,4 @@
-# @neumatter/neucss
+# @neumatter/neumattercss
 
 ## Table of Contents
 1. [ Install ](#install) <br />
@@ -11,7 +11,7 @@
 ### Install
 Run:
     
-    npm i @neumatter/neucss 
+    npm i @neumatter/neumattercss 
 
 <a name="gettingstarted"></a>
 ### Getting Started
