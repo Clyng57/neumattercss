@@ -191,7 +191,7 @@
 /* small */
 @media (min-width:620px) {
 
-  .l-sidebar\:sm    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:sm    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:sm > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:sm > *    {  width: calc(50% - var(--gutter));         }
@@ -218,7 +218,7 @@
 /* medium */
 @media (min-width:768px) {
 
-  .l-sidebar\:md    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:md    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:md > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:md > *    {  width: calc(50% - var(--gutter));         }
@@ -245,7 +245,7 @@
 /* large */
 @media (min-width:992px) {
 
-  .l-sidebar\:lg    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:lg    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:lg > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:lg > *    {  width: calc(50% - var(--gutter));         }
@@ -272,7 +272,7 @@
 /* extra-large */
 @media (min-width:1200px) {
 
-  .l-sidebar\:xl    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:xl    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:xl > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:xl > *    {  width: calc(50% - var(--gutter));         }
@@ -299,7 +299,7 @@
 /* extra-extra-large */
 @media (min-width:1440px) {
 
-  .l-sidebar\:xxl    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:xxl    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:xxl > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:xxl > *    {  width: calc(50% - var(--gutter));         }
