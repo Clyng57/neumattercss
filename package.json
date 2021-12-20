@@ -1,6 +1,6 @@
 {
   "name": "@neumatter/neumattercss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "css generater",
   "main": "index.js",
   "keywords": [],
