@@ -1,6 +1,6 @@
-![plot](./public/neumatter-logo-blackBG-01.svg)
+![plot](https://github.com/Clyng57/neumatter/raw/main/public/neumatter-logo-blackBG-01.svg)
 
-[ View Documentation ](neumatter.vercel.app)
+[ View Documentation ](https://neumatter.vercel.app)
 
 ## Table of Contents
 1. [ Download ](#download) <br />
