@@ -1,9 +1,15 @@
 {
   "name": "@neumatter/neumattercss",
-  "version": "0.0.4",
-  "description": "css generater",
+  "version": "0.0.5",
+  "description": "compile css into a neumorphism framework",
   "main": "index.js",
-  "keywords": [],
+  "keywords": [
+    "css",
+    "css compiler",
+    "css generater",
+    "neumorphism",
+    "css framework"
+  ],
   "author": "Cal Young",
   "license": "MIT",
   "bin": {

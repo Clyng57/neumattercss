@@ -326,92 +326,48 @@ fieldset:disabled a.c-btn {
   pointer-events: none
 }
 
-.c-btn\/primary {
+.c-btn\/reverse, .c-btn\/reverse:hover, .c-btn\/reverse:focus {
+  color: var(--bg-base);
+  background-image: linear-gradient(var(--bg-reverse-light), var(--bg-reverse));
+}
+
+.c-btn\/primary, .c-btn\/primary:hover, .c-btn\/primary:focus {
   color: var(--white);
   background-image: linear-gradient(var(--primary-light), var(--primary));
 }
 
-.c-btn\/primary:hover {
-  color: var(--white);
-  background-image: linear-gradient(var(--primary-light), var(--primary));
-}
-
-.c-btn\/primary:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--primary-light), var(--primary));
-}
-
-.c-btn\/primary:disabled {
-  background-color: var(--disabled);
-}
-
-.c-btn\/secondary {
+.c-btn\/secondary, .c-btn\/secondary:hover, .c-btn\/secondary:focus {
   color: var(--white);
   background-image: linear-gradient(var(--secondary-light), var(--secondary));
 }
 
-.c-btn\/secondary:hover, .c-btn\/secondary:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--secondary-light), var(--secondary));
-}
-
-.c-btn\/success {
-  color: var(--white);
-  background-image: linear-gradient(var(--success-light), var(--success));
-}
-
-.c-btn\/success:hover, .c-btn\/success:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--success-light), var(--success));
-}
-
-.c-btn\/success.disabled,
-.c-btn\/success:disabled {
-  background-color: var(--disabled);
-}
-
-.c-btn\/danger {
-  color: var(--white);
-  background-image: linear-gradient(var(--danger-light), var(--danger));
-}
-
-.c-btn\/danger:hover, .c-btn\/danger:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--danger-light), var(--danger));
-}
-
-.c-btn\/danger.disabled,
-.c-btn\/danger:disabled {
-  background-color: var(--disabled);
-}
-
-.c-btn\/warning {
-  color: var(--white);
-  background-image: linear-gradient(var(--warning-light), var(--warning));
-}
-
-.c-btn\/warning:hover, .c-btn\/warning:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--warning-light), var(--warning));
-}
-
-.c-btn\/warning.disabled,
-.c-btn\/warning:disabled {
-  background-color: var(--disabled);
-}
-
-.c-btn\/info {
+.c-btn\/info, .c-btn\/info:hover, .c-btn\/info:focus {
   color: var(--white);
   background-image: linear-gradient(var(--info-light), var(--info));
 }
 
-.c-btn\/info:hover, .c-btn\/info:focus {
+.c-btn\/success, .c-btn\/success:hover, .c-btn\/success:focus {
   color: var(--white);
-  background-image: linear-gradient(var(--info-light), var(--info));
+  background-image: linear-gradient(var(--success-light), var(--success));
 }
 
-.c-btn\/info.disabled,
-.c-btn\/info:disabled {
+.c-btn\/warning, .c-btn\/warning:hover, .c-btn\/warning:focus {
+  color: var(--white);
+  background-image: linear-gradient(var(--warning-light), var(--warning));
+}
+
+.c-btn\/danger, .c-btn\/danger:hover, .c-btn\/danger:focus {
+  color: var(--white);
+  background-image: linear-gradient(var(--danger-light), var(--danger));
+}
+
+.c-btn\/reverse.disabled, .c-btn\/reverse:disabled,
+.c-btn\/primary.disabled, .c-btn\/primary:disabled, 
+.c-btn\/secondary.disabled, .c-btn\/secondary:disabled, 
+.c-btn\/info.disabled, .c-btn\/info:disabled,
+.c-btn\/success.disabled, .c-btn\/success:disabled,
+.c-btn\/warning.disabled, .c-btn\/warning:disabled,
+.c-btn\/danger.disabled, .c-btn\/danger:disabled {
   background-color: var(--disabled);
 }
 
@@ -512,6 +468,6 @@ fieldset:disabled a.c-btn {
   color: var(--white);
   text-align: center;
   white-space: nowrap;
-  vertical-align: baseline;
+  vertical-align: top;
   border-radius: var(--system-border-d2);
 }

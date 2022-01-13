@@ -1,5 +1,6 @@
-
 module.exports.config = {
+  exportPath: "./public/css/",
+  variablesBase: 'base',
   colors: {
     primary: '',
     secondary: '',
@@ -30,7 +31,6 @@ module.exports.config = {
   systemMargin: '',
   systemHeight: '',
   systemBorder: '',
-  systemBorderD2: '',
   sidebarWidth: '',
   darkMode: {},
   reset: {},

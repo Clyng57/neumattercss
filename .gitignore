@@ -5,3 +5,8 @@
 .DS_Store
 
 .gitattributes
+lib/.DS_Store
+_downloads/.DS_Store
+_downloads/css/.DS_Store
+_downloads/js/.DS_Store
+compiled/.DS_Store

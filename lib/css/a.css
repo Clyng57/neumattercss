@@ -48,33 +48,91 @@
 
 /*_______A-colors */
 
-.a-text-color\/n1   { color: var(--text-negativeone) ; }
-.a-text-color\/base { color: var(--text) ;             }
+.a-text-color\/n1\:hover:hover,
+.a-text-color\/n1                   { color: var(--text-negativeone); }
+.a-text-color\/base\:hover:hover,
+.a-text-color\/base                 { color: var(--text) ;            }
+.a-text-color\/white\:hover:hover,
+.a-text-color\/white                { color: var(--white) ;           }
 
-.a-text-color\/primary   {  color: var(--primary) ;   }
-.a-text-color\/secondary {  color: var(--secondary) ; }
-.a-text-color\/info      {  color: var(--info) ;      }
-.a-text-color\/success   {  color: var(--success) ;   }
-.a-text-color\/warning   {  color: var(--warning) ;   }
-.a-text-color\/danger    {  color: var(--danger) ;    }
+.a-text-color\/primary, 
+.a-text-color\/primary\:hover:hover, 
+.a-text-color\/primary\:active:active, 
+.a-text-color\/primary\:active.active   {  color: var(--primary) ;   }
+.a-text-color\/secondary, 
+.a-text-color\/secondary\:hover:hover, 
+.a-text-color\/secondary\:active:active, 
+.a-text-color\/secondary\:active.active {  color: var(--secondary) ; }
+.a-text-color\/info, 
+.a-text-color\/info\:hover:hover, 
+.a-text-color\/info\:active:active, 
+.a-text-color\/info\:active.active      {  color: var(--info) ;      }
+.a-text-color\/success, 
+.a-text-color\/success\:hover:hover, 
+.a-text-color\/success\:active:active, 
+.a-text-color\/success\:active.active   {  color: var(--success) ;   }
+.a-text-color\/warning, 
+.a-text-color\/warning\:hover:hover, 
+.a-text-color\/warning\:active:active, 
+.a-text-color\/warning\:active.active   {  color: var(--warning) ;   }
+.a-text-color\/danger, 
+.a-text-color\/danger\:hover:hover, 
+.a-text-color\/danger\:active:active, 
+.a-text-color\/danger\:active.active    {  color: var(--danger) ;    }
 
 .a-bg-color\/n1   { background-color: var(--bg-negative-one) ; }
 .a-bg-color\/base { background-color: var(--bg-base) ;         }
 .a-bg-color\/1    { background-color: var(--bg-one) ;          }
 
-.a-bg-color\/primary-20   { background-color: var(--primary-20) ;   }
-.a-bg-color\/secondary-20 { background-color: var(--secondary-20) ; }
-.a-bg-color\/info-20      { background-color: var(--info-20) ;      }
-.a-bg-color\/success-20   { background-color: var(--success-20) ;   }
-.a-bg-color\/warning-20   { background-color: var(--warning-20) ;   }
-.a-bg-color\/danger-20    { background-color: var(--danger-20) ;    }
+.a-bg-color\/primary-20, 
+.a-bg-color\/primary-20\:hover:hover, 
+.a-bg-color\/primary-20\:active:active, 
+.a-bg-color\/primary-20\:active.active   { background-color: var(--primary-20) ;   }
+.a-bg-color\/secondary-20, 
+.a-bg-color\/secondary-20\:hover:hover, 
+.a-bg-color\/secondary-20\:active:active, 
+.a-bg-color\/secondary-20\:active.active { background-color: var(--secondary-20) ; }
+.a-bg-color\/info-20, 
+.a-bg-color\/info-20\:hover:hover, 
+.a-bg-color\/info-20\:active:active, 
+.a-bg-color\/info-20\:active.active      { background-color: var(--info-20) ;      }
+.a-bg-color\/success-20, 
+.a-bg-color\/success-20\:hover:hover, 
+.a-bg-color\/success-20\:active:active, 
+.a-bg-color\/success-20\:active.active   { background-color: var(--success-20) ;   }
+.a-bg-color\/warning-20, 
+.a-bg-color\/warning-20\:hover:hover, 
+.a-bg-color\/warning-20\:active:active, 
+.a-bg-color\/warning-20\:active.active   { background-color: var(--warning-20) ;   }
+.a-bg-color\/danger-20, 
+.a-bg-color\/danger-20\:hover:hover, 
+.a-bg-color\/danger-20\:active:active, 
+.a-bg-color\/danger-20\:active.active    { background-color: var(--danger-20) ;    }
 
-.a-bg-color\/primary-50   { background-color: var(--primary-50) ;   }
-.a-bg-color\/secondary-50 { background-color: var(--secondary-50) ; }
-.a-bg-color\/info-50      { background-color: var(--info-50) ;      }
-.a-bg-color\/success-50   { background-color: var(--success-50) ;   }
-.a-bg-color\/warning-50   { background-color: var(--warning-50) ;   }
-.a-bg-color\/danger-50    { background-color: var(--danger-50) ;    }
+.a-bg-color\/primary-50, 
+.a-bg-color\/primary-50\:hover:hover, 
+.a-bg-color\/primary-50\:active:active, 
+.a-bg-color\/primary-50\:active.active   { background-color: var(--primary-50) ;   }
+.a-bg-color\/secondary-50, 
+.a-bg-color\/secondary-50\:hover:hover, 
+.a-bg-color\/secondary-50\:active:active, 
+.a-bg-color\/secondary-50\:active.active { background-color: var(--secondary-50) ; }
+.a-bg-color\/info-50, 
+.a-bg-color\/info-50\:hover:hover, 
+.a-bg-color\/info-50\:active:active, 
+.a-bg-color\/info-50\:active.active      { background-color: var(--info-50) ;      }
+.a-bg-color\/success-50, 
+.a-bg-color\/success-50\:hover:hover, 
+.a-bg-color\/success-50\:active:active, 
+.a-bg-color\/success-50\:active.active   { background-color: var(--success-50) ;   }
+.a-bg-color\/warning-50, 
+.a-bg-color\/warning-50\:hover:hover, 
+.a-bg-color\/warning-50\:active:active, 
+.a-bg-color\/warning-50\:active.active   { background-color: var(--warning-50) ;   }
+.a-bg-color\/danger-50, 
+.a-bg-color\/danger-50\:hover:hover, 
+.a-bg-color\/danger-50\:active:active, 
+.a-bg-color\/danger-50\:active.active    { background-color: var(--danger-50) ;    }
 
 .a-bg-color\/primary      { background-color: var(--primary); }
 .a-bg-color\/secondary    { background-color: var(--secondary); }
@@ -86,12 +144,12 @@
 .a-bg-color\/n1\:hover:hover   { background-color: var(--bg-negative-one); }
 .a-bg-color\/base\:hover:hover { background-color: var(--bg-base); }
 
-.a-bg-color\/primary\:hover:hover      { background-color: var(--primary-20); }
-.a-bg-color\/secondary\:hover:hover    { background-color: var(--secondary-20); }
-.a-bg-color\/info\:hover:hover         { background-color: var(--info-20); }
-.a-bg-color\/success\:hover:hover      { background-color: var(--success-20); }
-.a-bg-color\/warning\:hover:hover      { background-color: var(--warning-20); }
-.a-bg-color\/danger\:hover:hover       { background-color: var(--danger-20); }
+.a-bg-color\/primary\:hover:hover      { background-color: var(--primary); }
+.a-bg-color\/secondary\:hover:hover    { background-color: var(--secondary); }
+.a-bg-color\/info\:hover:hover         { background-color: var(--info); }
+.a-bg-color\/success\:hover:hover      { background-color: var(--success); }
+.a-bg-color\/warning\:hover:hover      { background-color: var(--warning); }
+.a-bg-color\/danger\:hover:hover       { background-color: var(--danger); }
 
 .a-bg-color\/n1\:active:active,
 .a-bg-color\/n1\:active.active   { background-color: var(--bg-negative-one); }
@@ -99,17 +157,17 @@
 .a-bg-color\/base\:active.active { background-color: var(--bg-base); }
 
 .a-bg-color\/primary\:active:active,
-.a-bg-color\/primary\:active.active    { background-color: var(--primary-20); }
+.a-bg-color\/primary\:active.active    { background-color: var(--primary);   }
 .a-bg-color\/secondary\:active:active,
-.a-bg-color\/secondary\:active.active  { background-color: var(--secondary-20); }
+.a-bg-color\/secondary\:active.active  { background-color: var(--secondary); }
 .a-bg-color\/info\:active:active, 
-.a-bg-color\/info\:active.active       { background-color: var(--info-20); }
+.a-bg-color\/info\:active.active       { background-color: var(--info);      }
 .a-bg-color\/success\:active:active,
-.a-bg-color\/success\:active.active    { background-color: var(--success-20); }
+.a-bg-color\/success\:active.active    { background-color: var(--success);   }
 .a-bg-color\/warning\:active:active,
-.a-bg-color\/warning\:active.active    { background-color: var(--warning-20); }
+.a-bg-color\/warning\:active.active    { background-color: var(--warning);   }
 .a-bg-color\/danger\:active:active,
-.a-bg-color\/danger\:active.active     { background-color: var(--danger-20); }
+.a-bg-color\/danger\:active.active     { background-color: var(--danger);    }
 
 .a-bg-gradient\/base-one { background: linear-gradient(var(--bg-base), var(--bg-one)); }
 
@@ -140,17 +198,31 @@
 }
 
 .a-bg\/concave\:hover,
-.a-bg\/concave\:active {  
+.a-bg\/concave\:active,
+.a-bg\/convex\:hover,
+.a-bg\/convex\:active,
+.a-bg\/convex-small\:hover,
+.a-bg\/convex-small\:active {  
   position: relative;
   transition: all 0.15s ease-in-out;
 }
 
 .a-bg\/concave\:hover:hover,
 .a-bg\/concave\:active:active,
-.a-bg\/concave\:active.active { box-shadow: none; }
+.a-bg\/concave\:active.active,
+.a-bg\/convex\:hover:hover,
+.a-bg\/convex\:active:active,
+.a-bg\/convex\:active.active,
+.a-bg\/convex-small\:hover:hover,
+.a-bg\/convex-small\:active:active,
+.a-bg\/convex-small\:active.active { box-shadow: none; }
 
 .a-bg\/concave\:hover::after,
-.a-bg\/concave\:active::after {
+.a-bg\/concave\:active::after,
+.a-bg\/convex\:hover::after,
+.a-bg\/convex\:active::after,
+.a-bg\/convex-small\:hover::after,
+.a-bg\/convex-small\:active::after {
   content: '';
   position: absolute;
   top: 0;
@@ -160,18 +232,41 @@
   height: 100%;
   opacity: 0;
   transition: all 0.15s ease-in-out;
+}
+.a-bg\/concave\:hover::after,
+.a-bg\/concave\:active::after {
   box-shadow: 0px 0px 0px 0 var(--Shadow-none), 
               0px 0px 0px 0 var(--Highlight-none), 
               inset 3px 3px 8px 0 var(--Shadow-concave), 
               inset -3px -3px 5px 0 var(--Highlight-concave);
 }
+.a-bg\/convex\:hover::after,
+.a-bg\/convex\:active::after {
+  box-shadow: 5px 5px 12px 0 var(--Shadow), 
+              -7px -7px 12px 0 var(--Highlight);
+}
+.a-bg\/convex-small\:hover::after,
+.a-bg\/convex-small\:active::after {
+  box-shadow: 2px 2px 5px 0 var(--Shadow), 
+              -3px -3px 5px 0 var(--Highlight);
+}
 
 .a-bg\/concave\:hover::after,
-.a-bg\/concave\:active::after { border-radius: inherit; }
+.a-bg\/concave\:active::after,
+.a-bg\/convex\:hover::after,
+.a-bg\/convex\:active::after,
+.a-bg\/convex-small\:hover::after,
+.a-bg\/convex-small\:active::after { border-radius: inherit; }
 
 .a-bg\/concave\:hover:hover::after,
 .a-bg\/concave\:active:active::after,
-.a-bg\/concave\:active.active::after { opacity: 1; }
+.a-bg\/concave\:active.active::after,
+.a-bg\/convex\:hover:hover::after,
+.a-bg\/convex\:active:active::after,
+.a-bg\/convex\:active.active::after,
+.a-bg\/convex-small\:hover:hover::after,
+.a-bg\/convex-small\:active:active::after,
+.a-bg\/convex-small\:active.active::after { opacity: 1; }
 
 .a-shadow\/none { box-shadow: none; }
 
