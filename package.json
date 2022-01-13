@@ -1,6 +1,6 @@
 {
   "name": "@neumatter/neumattercss",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "compile css into a neumorphism framework",
   "main": "index.js",
   "keywords": [
