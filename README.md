@@ -1,6 +1,9 @@
 ![plot](https://github.com/Clyng57/neumatter/raw/main/public/neumatter-logo-blackBG-01.svg)
 
-[ View Documentation ](https://neumatter.vercel.app)
+A light-weight neumorphic css framework to standardize layouts and spacing. 
+A moderate utility first approach.
+
+[ View Documentation ](https://neumattercss.com)
 
 ## Table of Contents
 1. [ Download ](#download) <br />
