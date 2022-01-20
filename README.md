@@ -43,3 +43,13 @@ Edit colors, system margin & padding, system border radius, and exclude css from
 ### Compile neumatter.css
     
     npm run neucss compile
+
+
+![plot](https://github.com/Clyng57/neumatter/raw/main/public/neumattercssBGColorPage.png)
+
+
+![plot](https://github.com/Clyng57/neumatter/raw/main/public/neumattercssConcavePage.png)
+
+
+![plot](https://github.com/Clyng57/neumatter/raw/main/public/neumattercssFormPage.png)
+
