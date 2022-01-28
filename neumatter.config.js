@@ -1,5 +1,5 @@
 module.exports.config = {
-  exportPath: "./_downloads/css/",
+  exportPath: "./_build/css/",
   variablesBase: 'base',
   colors: {
     primary: '',

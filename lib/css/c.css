@@ -382,7 +382,6 @@ fieldset:disabled a.c-btn {
   bottom: 0;
   margin: calc(var(--system-margin) / 2);
   padding: 0.25rem 0.5rem;
-  z-index: 1030;
 }
 .c-theme-btn\/dark {
   width: 16px;

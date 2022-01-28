@@ -41,6 +41,8 @@
 	--bg-one-blur: rgba(calc(var(--bgbase-r) - 30),calc(var(--bgbase-g) - 30),calc(var(--bgbase-b) - 30),0.3);
 	--bg-elements: rgba(calc(var(--bgbase-r) - 20),calc(var(--bgbase-g) - 20),calc(var(--bgbase-b) - 20),1.0);
   --bg-dark: rgba(0,0,0,0.8);
+	--bg-reverse: var(--text);
+	--bg-reverse-light: rgba(calc(var(--textbase-r) + 30),calc(var(--textbase-g) + 30),calc(var(--textbase-b) + 30),1.0);
   
 	--border: rgba(calc(var(--bgbase-r) - 40),calc(var(--bgbase-g) - 40),calc(var(--bgbase-b) - 40),1.0);
   --disabled: rgba(calc(var(--textbase-r) + 200),calc(var(--textbase-g) + 200),calc(var(--textbase-b) + 200),1.0);
@@ -124,7 +126,7 @@
 	--system-height: 1.25rem;
 	--system-border: 1.25rem;
 	--system-border-d2: calc(var(--system-border) / 2);
-	--sidebar-width: --sidebar-width: 15rem;
+	--sidebar-width: 15rem;
 }
 [data-theme="dark"] {
     --textbase-r: 235;
@@ -142,6 +144,8 @@
     --border: rgba(calc(var(--bgbase-r) + 30),calc(var(--bgbase-g) + 30),calc(var(--bgbase-b) + 30),1.0);
     --disabled: rgba(calc(var(--textbase-r) - 160),calc(var(--textbase-g) - 160),calc(var(--textbase-b) - 160),1.0);
     --bg-dark: var(--bg-one-blur);
+    --bg-reverse: rgba(calc(var(--textbase-r) - 30),calc(var(--textbase-g) - 30),calc(var(--textbase-b) - 30),1.0);
+    --bg-reverse-light: var(--text);
   
     --Shadow: rgba(0, 0, 0, 0.4);
     --Shadow-bg-one: rgba(0, 0, 0, 0.3);
@@ -188,7 +192,7 @@
     need normalizing.
     - normalize.css | MIT License | github.com/necolas/normalize.css
     - This is a slighly customized version of normalize.css, 
-    for dealing with Morphic CSS.
+    for dealing with neumatter CSS.
     - Comments have been removed for the sake of compactness.
 ----------------------------------------------------------------------------
 */
@@ -716,7 +720,7 @@ p { font-size: 0.9375rem; line-height: 1.4; }
 /* small */
 @media (min-width:620px) {
 
-  .l-sidebar\:sm    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:sm    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:sm > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:sm > *    {  width: calc(50% - var(--gutter));         }
@@ -743,7 +747,7 @@ p { font-size: 0.9375rem; line-height: 1.4; }
 /* medium */
 @media (min-width:768px) {
 
-  .l-sidebar\:md    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:md    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:md > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:md > *    {  width: calc(50% - var(--gutter));         }
@@ -770,7 +774,7 @@ p { font-size: 0.9375rem; line-height: 1.4; }
 /* large */
 @media (min-width:992px) {
 
-  .l-sidebar\:lg    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:lg    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:lg > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:lg > *    {  width: calc(50% - var(--gutter));         }
@@ -797,7 +801,7 @@ p { font-size: 0.9375rem; line-height: 1.4; }
 /* extra-large */
 @media (min-width:1200px) {
 
-  .l-sidebar\:xl    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:xl    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:xl > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:xl > *    {  width: calc(50% - var(--gutter));         }
@@ -824,7 +828,7 @@ p { font-size: 0.9375rem; line-height: 1.4; }
 /* extra-extra-large */
 @media (min-width:1440px) {
 
-  .l-sidebar\:xxl    {  width: 15rem; overflow-y: scroll;  }
+  .l-sidebar\:xxl    {  width: var(--sidebar-width); overflow-y: scroll;  }
 
   .l-columns\/1\:xxl > *    {  width: calc(100% - var(--gutter));        }
   .l-columns\/2\:xxl > *    {  width: calc(50% - var(--gutter));         }
@@ -1173,92 +1177,48 @@ fieldset:disabled a.c-btn {
   pointer-events: none
 }
 
-.c-btn\/primary {
+.c-btn\/reverse, .c-btn\/reverse:hover, .c-btn\/reverse:focus {
+  color: var(--bg-base);
+  background-image: linear-gradient(var(--bg-reverse-light), var(--bg-reverse));
+}
+
+.c-btn\/primary, .c-btn\/primary:hover, .c-btn\/primary:focus {
   color: var(--white);
   background-image: linear-gradient(var(--primary-light), var(--primary));
 }
 
-.c-btn\/primary:hover {
-  color: var(--white);
-  background-image: linear-gradient(var(--primary-light), var(--primary));
-}
-
-.c-btn\/primary:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--primary-light), var(--primary));
-}
-
-.c-btn\/primary:disabled {
-  background-color: var(--disabled);
-}
-
-.c-btn\/secondary {
+.c-btn\/secondary, .c-btn\/secondary:hover, .c-btn\/secondary:focus {
   color: var(--white);
   background-image: linear-gradient(var(--secondary-light), var(--secondary));
 }
 
-.c-btn\/secondary:hover, .c-btn\/secondary:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--secondary-light), var(--secondary));
-}
-
-.c-btn\/success {
-  color: var(--white);
-  background-image: linear-gradient(var(--success-light), var(--success));
-}
-
-.c-btn\/success:hover, .c-btn\/success:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--success-light), var(--success));
-}
-
-.c-btn\/success.disabled,
-.c-btn\/success:disabled {
-  background-color: var(--disabled);
-}
-
-.c-btn\/danger {
-  color: var(--white);
-  background-image: linear-gradient(var(--danger-light), var(--danger));
-}
-
-.c-btn\/danger:hover, .c-btn\/danger:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--danger-light), var(--danger));
-}
-
-.c-btn\/danger.disabled,
-.c-btn\/danger:disabled {
-  background-color: var(--disabled);
-}
-
-.c-btn\/warning {
-  color: var(--white);
-  background-image: linear-gradient(var(--warning-light), var(--warning));
-}
-
-.c-btn\/warning:hover, .c-btn\/warning:focus {
-  color: var(--white);
-  background-image: linear-gradient(var(--warning-light), var(--warning));
-}
-
-.c-btn\/warning.disabled,
-.c-btn\/warning:disabled {
-  background-color: var(--disabled);
-}
-
-.c-btn\/info {
+.c-btn\/info, .c-btn\/info:hover, .c-btn\/info:focus {
   color: var(--white);
   background-image: linear-gradient(var(--info-light), var(--info));
 }
 
-.c-btn\/info:hover, .c-btn\/info:focus {
+.c-btn\/success, .c-btn\/success:hover, .c-btn\/success:focus {
   color: var(--white);
-  background-image: linear-gradient(var(--info-light), var(--info));
+  background-image: linear-gradient(var(--success-light), var(--success));
 }
 
-.c-btn\/info.disabled,
-.c-btn\/info:disabled {
+.c-btn\/warning, .c-btn\/warning:hover, .c-btn\/warning:focus {
+  color: var(--white);
+  background-image: linear-gradient(var(--warning-light), var(--warning));
+}
+
+.c-btn\/danger, .c-btn\/danger:hover, .c-btn\/danger:focus {
+  color: var(--white);
+  background-image: linear-gradient(var(--danger-light), var(--danger));
+}
+
+.c-btn\/reverse.disabled, .c-btn\/reverse:disabled,
+.c-btn\/primary.disabled, .c-btn\/primary:disabled, 
+.c-btn\/secondary.disabled, .c-btn\/secondary:disabled, 
+.c-btn\/info.disabled, .c-btn\/info:disabled,
+.c-btn\/success.disabled, .c-btn\/success:disabled,
+.c-btn\/warning.disabled, .c-btn\/warning:disabled,
+.c-btn\/danger.disabled, .c-btn\/danger:disabled {
   background-color: var(--disabled);
 }
 
@@ -1273,7 +1233,6 @@ fieldset:disabled a.c-btn {
   bottom: 0;
   margin: calc(var(--system-margin) / 2);
   padding: 0.25rem 0.5rem;
-  z-index: 1030;
 }
 .c-theme-btn\/dark {
   width: 16px;
@@ -1359,7 +1318,7 @@ fieldset:disabled a.c-btn {
   color: var(--white);
   text-align: center;
   white-space: nowrap;
-  vertical-align: baseline;
+  vertical-align: top;
   border-radius: var(--system-border-d2);
 }
 
@@ -1734,6 +1693,7 @@ input[type=file]::file-selector-button {
 .u-z-index\/1000 { z-index: 1000; }
 .u-z-index\/1015 { z-index: 1015; }
 .u-z-index\/1030 { z-index: 1030; }
+.u-z-index\/1080 { z-index: 1080; }
 
 .u-bg-clip\/border-box  { background-clip: border-box; }
 .u-bg-clip\/content-box { background-clip: content-box; }
@@ -2646,33 +2606,91 @@ input[type=file]::file-selector-button {
 
 /*_______A-colors */
 
-.a-text-color\/n1   { color: var(--text-negativeone) ; }
-.a-text-color\/base { color: var(--text) ;             }
+.a-text-color\/n1\:hover:hover,
+.a-text-color\/n1                   { color: var(--text-negativeone); }
+.a-text-color\/base\:hover:hover,
+.a-text-color\/base                 { color: var(--text) ;            }
+.a-text-color\/white\:hover:hover,
+.a-text-color\/white                { color: var(--white) ;           }
 
-.a-text-color\/primary   {  color: var(--primary) ;   }
-.a-text-color\/secondary {  color: var(--secondary) ; }
-.a-text-color\/info      {  color: var(--info) ;      }
-.a-text-color\/success   {  color: var(--success) ;   }
-.a-text-color\/warning   {  color: var(--warning) ;   }
-.a-text-color\/danger    {  color: var(--danger) ;    }
+.a-text-color\/primary, 
+.a-text-color\/primary\:hover:hover, 
+.a-text-color\/primary\:active:active, 
+.a-text-color\/primary\:active.active   {  color: var(--primary) ;   }
+.a-text-color\/secondary, 
+.a-text-color\/secondary\:hover:hover, 
+.a-text-color\/secondary\:active:active, 
+.a-text-color\/secondary\:active.active {  color: var(--secondary) ; }
+.a-text-color\/info, 
+.a-text-color\/info\:hover:hover, 
+.a-text-color\/info\:active:active, 
+.a-text-color\/info\:active.active      {  color: var(--info) ;      }
+.a-text-color\/success, 
+.a-text-color\/success\:hover:hover, 
+.a-text-color\/success\:active:active, 
+.a-text-color\/success\:active.active   {  color: var(--success) ;   }
+.a-text-color\/warning, 
+.a-text-color\/warning\:hover:hover, 
+.a-text-color\/warning\:active:active, 
+.a-text-color\/warning\:active.active   {  color: var(--warning) ;   }
+.a-text-color\/danger, 
+.a-text-color\/danger\:hover:hover, 
+.a-text-color\/danger\:active:active, 
+.a-text-color\/danger\:active.active    {  color: var(--danger) ;    }
 
 .a-bg-color\/n1   { background-color: var(--bg-negative-one) ; }
 .a-bg-color\/base { background-color: var(--bg-base) ;         }
 .a-bg-color\/1    { background-color: var(--bg-one) ;          }
 
-.a-bg-color\/primary-20   { background-color: var(--primary-20) ;   }
-.a-bg-color\/secondary-20 { background-color: var(--secondary-20) ; }
-.a-bg-color\/info-20      { background-color: var(--info-20) ;      }
-.a-bg-color\/success-20   { background-color: var(--success-20) ;   }
-.a-bg-color\/warning-20   { background-color: var(--warning-20) ;   }
-.a-bg-color\/danger-20    { background-color: var(--danger-20) ;    }
+.a-bg-color\/primary-20, 
+.a-bg-color\/primary-20\:hover:hover, 
+.a-bg-color\/primary-20\:active:active, 
+.a-bg-color\/primary-20\:active.active   { background-color: var(--primary-20) ;   }
+.a-bg-color\/secondary-20, 
+.a-bg-color\/secondary-20\:hover:hover, 
+.a-bg-color\/secondary-20\:active:active, 
+.a-bg-color\/secondary-20\:active.active { background-color: var(--secondary-20) ; }
+.a-bg-color\/info-20, 
+.a-bg-color\/info-20\:hover:hover, 
+.a-bg-color\/info-20\:active:active, 
+.a-bg-color\/info-20\:active.active      { background-color: var(--info-20) ;      }
+.a-bg-color\/success-20, 
+.a-bg-color\/success-20\:hover:hover, 
+.a-bg-color\/success-20\:active:active, 
+.a-bg-color\/success-20\:active.active   { background-color: var(--success-20) ;   }
+.a-bg-color\/warning-20, 
+.a-bg-color\/warning-20\:hover:hover, 
+.a-bg-color\/warning-20\:active:active, 
+.a-bg-color\/warning-20\:active.active   { background-color: var(--warning-20) ;   }
+.a-bg-color\/danger-20, 
+.a-bg-color\/danger-20\:hover:hover, 
+.a-bg-color\/danger-20\:active:active, 
+.a-bg-color\/danger-20\:active.active    { background-color: var(--danger-20) ;    }
 
-.a-bg-color\/primary-50   { background-color: var(--primary-50) ;   }
-.a-bg-color\/secondary-50 { background-color: var(--secondary-50) ; }
-.a-bg-color\/info-50      { background-color: var(--info-50) ;      }
-.a-bg-color\/success-50   { background-color: var(--success-50) ;   }
-.a-bg-color\/warning-50   { background-color: var(--warning-50) ;   }
-.a-bg-color\/danger-50    { background-color: var(--danger-50) ;    }
+.a-bg-color\/primary-50, 
+.a-bg-color\/primary-50\:hover:hover, 
+.a-bg-color\/primary-50\:active:active, 
+.a-bg-color\/primary-50\:active.active   { background-color: var(--primary-50) ;   }
+.a-bg-color\/secondary-50, 
+.a-bg-color\/secondary-50\:hover:hover, 
+.a-bg-color\/secondary-50\:active:active, 
+.a-bg-color\/secondary-50\:active.active { background-color: var(--secondary-50) ; }
+.a-bg-color\/info-50, 
+.a-bg-color\/info-50\:hover:hover, 
+.a-bg-color\/info-50\:active:active, 
+.a-bg-color\/info-50\:active.active      { background-color: var(--info-50) ;      }
+.a-bg-color\/success-50, 
+.a-bg-color\/success-50\:hover:hover, 
+.a-bg-color\/success-50\:active:active, 
+.a-bg-color\/success-50\:active.active   { background-color: var(--success-50) ;   }
+.a-bg-color\/warning-50, 
+.a-bg-color\/warning-50\:hover:hover, 
+.a-bg-color\/warning-50\:active:active, 
+.a-bg-color\/warning-50\:active.active   { background-color: var(--warning-50) ;   }
+.a-bg-color\/danger-50, 
+.a-bg-color\/danger-50\:hover:hover, 
+.a-bg-color\/danger-50\:active:active, 
+.a-bg-color\/danger-50\:active.active    { background-color: var(--danger-50) ;    }
 
 .a-bg-color\/primary      { background-color: var(--primary); }
 .a-bg-color\/secondary    { background-color: var(--secondary); }
@@ -2684,12 +2702,12 @@ input[type=file]::file-selector-button {
 .a-bg-color\/n1\:hover:hover   { background-color: var(--bg-negative-one); }
 .a-bg-color\/base\:hover:hover { background-color: var(--bg-base); }
 
-.a-bg-color\/primary\:hover:hover      { background-color: var(--primary-20); }
-.a-bg-color\/secondary\:hover:hover    { background-color: var(--secondary-20); }
-.a-bg-color\/info\:hover:hover         { background-color: var(--info-20); }
-.a-bg-color\/success\:hover:hover      { background-color: var(--success-20); }
-.a-bg-color\/warning\:hover:hover      { background-color: var(--warning-20); }
-.a-bg-color\/danger\:hover:hover       { background-color: var(--danger-20); }
+.a-bg-color\/primary\:hover:hover      { background-color: var(--primary); }
+.a-bg-color\/secondary\:hover:hover    { background-color: var(--secondary); }
+.a-bg-color\/info\:hover:hover         { background-color: var(--info); }
+.a-bg-color\/success\:hover:hover      { background-color: var(--success); }
+.a-bg-color\/warning\:hover:hover      { background-color: var(--warning); }
+.a-bg-color\/danger\:hover:hover       { background-color: var(--danger); }
 
 .a-bg-color\/n1\:active:active,
 .a-bg-color\/n1\:active.active   { background-color: var(--bg-negative-one); }
@@ -2697,17 +2715,17 @@ input[type=file]::file-selector-button {
 .a-bg-color\/base\:active.active { background-color: var(--bg-base); }
 
 .a-bg-color\/primary\:active:active,
-.a-bg-color\/primary\:active.active    { background-color: var(--primary-20); }
+.a-bg-color\/primary\:active.active    { background-color: var(--primary);   }
 .a-bg-color\/secondary\:active:active,
-.a-bg-color\/secondary\:active.active  { background-color: var(--secondary-20); }
+.a-bg-color\/secondary\:active.active  { background-color: var(--secondary); }
 .a-bg-color\/info\:active:active, 
-.a-bg-color\/info\:active.active       { background-color: var(--info-20); }
+.a-bg-color\/info\:active.active       { background-color: var(--info);      }
 .a-bg-color\/success\:active:active,
-.a-bg-color\/success\:active.active    { background-color: var(--success-20); }
+.a-bg-color\/success\:active.active    { background-color: var(--success);   }
 .a-bg-color\/warning\:active:active,
-.a-bg-color\/warning\:active.active    { background-color: var(--warning-20); }
+.a-bg-color\/warning\:active.active    { background-color: var(--warning);   }
 .a-bg-color\/danger\:active:active,
-.a-bg-color\/danger\:active.active     { background-color: var(--danger-20); }
+.a-bg-color\/danger\:active.active     { background-color: var(--danger);    }
 
 .a-bg-gradient\/base-one { background: linear-gradient(var(--bg-base), var(--bg-one)); }
 
@@ -2738,17 +2756,31 @@ input[type=file]::file-selector-button {
 }
 
 .a-bg\/concave\:hover,
-.a-bg\/concave\:active {  
+.a-bg\/concave\:active,
+.a-bg\/convex\:hover,
+.a-bg\/convex\:active,
+.a-bg\/convex-small\:hover,
+.a-bg\/convex-small\:active {  
   position: relative;
   transition: all 0.15s ease-in-out;
 }
 
 .a-bg\/concave\:hover:hover,
 .a-bg\/concave\:active:active,
-.a-bg\/concave\:active.active { box-shadow: none; }
+.a-bg\/concave\:active.active,
+.a-bg\/convex\:hover:hover,
+.a-bg\/convex\:active:active,
+.a-bg\/convex\:active.active,
+.a-bg\/convex-small\:hover:hover,
+.a-bg\/convex-small\:active:active,
+.a-bg\/convex-small\:active.active { box-shadow: none; }
 
 .a-bg\/concave\:hover::after,
-.a-bg\/concave\:active::after {
+.a-bg\/concave\:active::after,
+.a-bg\/convex\:hover::after,
+.a-bg\/convex\:active::after,
+.a-bg\/convex-small\:hover::after,
+.a-bg\/convex-small\:active::after {
   content: '';
   position: absolute;
   top: 0;
@@ -2758,18 +2790,41 @@ input[type=file]::file-selector-button {
   height: 100%;
   opacity: 0;
   transition: all 0.15s ease-in-out;
+}
+.a-bg\/concave\:hover::after,
+.a-bg\/concave\:active::after {
   box-shadow: 0px 0px 0px 0 var(--Shadow-none), 
               0px 0px 0px 0 var(--Highlight-none), 
               inset 3px 3px 8px 0 var(--Shadow-concave), 
               inset -3px -3px 5px 0 var(--Highlight-concave);
 }
+.a-bg\/convex\:hover::after,
+.a-bg\/convex\:active::after {
+  box-shadow: 5px 5px 12px 0 var(--Shadow), 
+              -7px -7px 12px 0 var(--Highlight);
+}
+.a-bg\/convex-small\:hover::after,
+.a-bg\/convex-small\:active::after {
+  box-shadow: 2px 2px 5px 0 var(--Shadow), 
+              -3px -3px 5px 0 var(--Highlight);
+}
 
 .a-bg\/concave\:hover::after,
-.a-bg\/concave\:active::after { border-radius: inherit; }
+.a-bg\/concave\:active::after,
+.a-bg\/convex\:hover::after,
+.a-bg\/convex\:active::after,
+.a-bg\/convex-small\:hover::after,
+.a-bg\/convex-small\:active::after { border-radius: inherit; }
 
 .a-bg\/concave\:hover:hover::after,
 .a-bg\/concave\:active:active::after,
-.a-bg\/concave\:active.active::after { opacity: 1; }
+.a-bg\/concave\:active.active::after,
+.a-bg\/convex\:hover:hover::after,
+.a-bg\/convex\:active:active::after,
+.a-bg\/convex\:active.active::after,
+.a-bg\/convex-small\:hover:hover::after,
+.a-bg\/convex-small\:active:active::after,
+.a-bg\/convex-small\:active.active::after { opacity: 1; }
 
 .a-shadow\/none { box-shadow: none; }
 

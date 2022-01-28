@@ -12,10 +12,11 @@ A moderate utility first approach.
 4. [ Generate Config File ](#genconfig) <br />
 5. [ Configuration Options ](#config) <br />
 6. [ Compile ](#compile) <br />
+7. [ Samples ](#samples) <br />
 
 <a name="download"></a>
 ### Download
-Download the /_downloads directory
+Download the /_build directory
 
 <a name="install"></a>
 ### Install
@@ -44,6 +45,8 @@ Edit colors, system margin & padding, system border radius, and exclude css from
     
     npm run neucss compile
 
+<a name="samples"></a>
+### Samples of neumatter.css in use:
 
 ![plot](https://github.com/Clyng57/neumatter/raw/main/public/neumattercssBGColorPage.png)
 
@@ -52,4 +55,6 @@ Edit colors, system margin & padding, system border radius, and exclude css from
 
 
 ![plot](https://github.com/Clyng57/neumatter/raw/main/public/neumattercssFormPage.png)
+
+[ View More ](https://neumattercss.com)
 
