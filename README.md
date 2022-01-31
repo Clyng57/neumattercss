@@ -15,6 +15,15 @@ Add :sm, :md, :lg, :xl, :xxl to various classes to create breakpoints. This will
 
     l-column/6:lg
 
+
+System margin and padding controlled by the systemMargin in the config file.
+
+    u-[m, p]/system
+    u-[m, p]t/system
+    u-[m, p]b/system
+    u-[m, p]x/system
+    u-[m, p]y/system
+
 [ View Documentation ](https://neumattercss.com)
 
 ## Table of Contents
