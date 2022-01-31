@@ -3,6 +3,11 @@
 A light-weight neumorphic css framework to standardize layouts and spacing. 
 A moderate utility first approach.
 
+Add :hover or :active to any attributes class except for a-rounded.
+
+    a-bg/concave:hover
+    prefix-property/value:conditional
+
 [ View Documentation ](https://neumattercss.com)
 
 ## Table of Contents
