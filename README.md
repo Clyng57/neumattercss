@@ -3,10 +3,17 @@
 A light-weight neumorphic css framework to standardize layouts and spacing. 
 A moderate utility first approach.
 
+    prefix-property/value:conditional
+
+
 Add :hover or :active to any attributes class except for a-rounded.
 
     a-bg/concave:hover
-    prefix-property/value:conditional
+
+
+Add :sm, :md, :lg, :xl, :xxl to various classes to create breakpoints. This will cause the width to go from 50% to 100% at the large breakpoint.
+
+    l-column/6:lg
 
 [ View Documentation ](https://neumattercss.com)
 
