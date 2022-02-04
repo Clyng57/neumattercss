@@ -1722,7 +1722,7 @@ input[type=file]::file-selector-button {
 
 /*_______U-margins_U-padding*/
 
-.u-m\/system    {  margin: var(--system-margin)  }
+.u-m\/system       {  margin: var(--system-margin)  }
 .u-m\/system-50    {  margin: calc(var(--system-margin) / 2)  }
 .u-m\/system-33    {  margin: calc(var(--system-margin) / 3)  }
 .u-m\/system-25    {  margin: calc(var(--system-margin) / 4)  }

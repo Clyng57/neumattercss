@@ -1,6 +1,6 @@
 {
   "name": "@neumatter/neumattercss",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "compile css into a light-weight neumorphic framework",
   "main": "index.js",
   "keywords": [
@@ -21,7 +21,7 @@
     "node": ">=14.13.0"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
+    "chroma-palette": "^1.0.11",
     "commander": "^8.3.0"
   }
 }
